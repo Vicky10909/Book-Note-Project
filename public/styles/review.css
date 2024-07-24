@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 70px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.main {
+    flex: 3;
+    margin-left: 200px;
+    text-align: center;
+}
+
+img {
+    flex: 1;
+    height: 600px;
+}
+
+#home {
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: black;
+}
+
+.emoji {
+    font-size: 50px;
+    padding-right: 10px;
+}
+
+textarea {
+    height: 500px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+#title {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+#no-review {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.button-center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#submit {
+    background-color: #134B70;
+    color: #EEEEEE;
+    border: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 30%;
+    right: 50%;
+}
+
+#submit:hover {
+    background-color: #508C9B;
+}

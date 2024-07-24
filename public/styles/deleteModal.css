@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Center the modal vertically */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Modal content styling */
+.modal-content {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Modal header styling */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Modal footer styling */
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Button styles */
+.btn {
+    border-radius: 3px;
+}
+
+/* Primary button */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Secondary button */
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #5a6268;
+    border-color: #545b62;
+}

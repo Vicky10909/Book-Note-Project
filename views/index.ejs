@@ -1,0 +1,57 @@
+<%- include("partials/header.ejs") %>
+  <head>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+    <div>
+      <div class="filter">
+        <form action="/filter" method="get">
+          <label for="book-filter" id="book-filter">Filter By:</label>
+          <select name="book-filter" class="form-select form-select-sm" aria-label="Small select example">
+          <option value="">Please choose an option</option>
+          <option value="alphabat">A-Z</option>
+          <option value="top-rated">Top Rated</option>
+          <option value="unreviewed">No Reviews Yet</option>
+          </select>
+          <input type="submit" value="Submit" id="submit">
+        </form>
+      </div>
+      
+      <!--  if book has already exisited, pop up a window -->
+      <% if (locals.bookTitleArr) {%>
+          <%- include("partials/searchRepeatModal.ejs") %>
+          <!-- else list the books info -->
+      <%} else {%>
+        <% for (let book of books) { %> 
+          <% const img_id = `https://covers.openlibrary.org/b/olid/${book.cover_id}.jpg` %>
+          <div class="container">
+            <div class="row row-cols-1">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary-emphasis">Written By: <%= book.author %></strong>
+                  <h3 class="mb-0"><%= book.title %></h3>
+                  <div class="mb-1 text-body-secondary">Average rating online: <%= book.rating_value %></div>
+                  <p class="card-text mb-auto">Ready to review <strong><%= book.title %></strong>?</p>
+  
+                  <div>
+                    <form action="/reviews" method="get">
+                      <!-- when click on button, bookId = book.id -->
+                      <button  class="review-button" name="bookId" value="<%= book.id %>">Check reviews</button>
+                    </form>
+                  </div>
+                  
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img class="bd-placeholder-img" width="200" height="250" src="<%= img_id %>" alt="This is the cover of the book">
+                </div>
+              </div>
+            </div>
+  
+              </div>
+            </div>
+          </div> 
+        <% } %>
+        <%}%>
+     
+    </div>
+</body>
+</html>

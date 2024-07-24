@@ -1,0 +1,31 @@
+p {
+    margin-top: 20px;
+}
+
+#review {
+    font-size: larger;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px;
+}
+
+#edit,
+#delete {
+    background-color: #134B70;
+    color: #EEEEEE;
+    border: none;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#edit:hover {
+    background-color: #2072a8;
+}
+
+#delete:hover {
+    background-color: #2072a8;
+}

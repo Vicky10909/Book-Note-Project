@@ -1,0 +1,17 @@
+.filter {
+    margin: 20px;
+}
+
+#book-filter {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#submit {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #EEEEEE;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
